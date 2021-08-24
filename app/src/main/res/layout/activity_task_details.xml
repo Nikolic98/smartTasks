@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_yellow">
+
+    <ImageView
+        android:id="@+id/back_arrow_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_left_arrow" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        tools:text="Task Details"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/task_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_tv"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/task_details"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/task_title_tv"
+            style="@style/PrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="25sp"
+            tools:text="Task title" />
+
+        <View
+            android:id="@+id/horizontal_line_v"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/task_title_tv"
+            android:layout_marginTop="7dp"
+            android:background="@color/app_cream_white" />
+
+        <TextView
+            android:id="@+id/date_label_tv"
+            style="@style/SecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line_v"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            tools:text="Due date" />
+
+        <TextView
+            android:id="@+id/days_label_tv"
+            style="@style/SecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line_v"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            tools:text="Days left" />
+
+        <TextView
+            android:id="@+id/date_value_tv"
+            style="@style/PrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_label_tv"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="7dp"
+            tools:text="Apr 23 2016" />
+
+        <TextView
+            android:id="@+id/days_value_tv"
+            style="@style/PrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/days_label_tv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            tools:text="12" />
+
+        <View
+            android:id="@+id/second_horizontal_line_v"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/days_value_tv"
+            android:layout_marginTop="7dp"
+            android:background="@color/app_cream_white" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            style="@style/SecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_horizontal_line_v"
+            android:layout_marginTop="10dp"
+            tools:text="dasldkjasdlkdskadj askldj aslkdj lkajdadkjalkdsjjasldkjsdsdsdsd akldjaksldjaklsdj klsajdakdj lajsdlkasdjaslj dalkjd" />
+
+        <View
+            android:id="@+id/third_horizontal_line_v"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/description_tv"
+            android:layout_marginTop="7dp"
+            android:background="@color/app_cream_white" />
+
+        <LinearLayout
+            android:id="@+id/comment_container_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/third_horizontal_line_v"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/comment_label_tv"
+                style="@style/SecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="Comment" />
+
+            <TextView
+                android:id="@+id/comment_tv"
+                style="@style/SecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="dasldkjasdlkdskadj askldj aslkdj lkajdadkjalkdsjjasldkjsdsdsdsd akldjaksldjaklsdj klsajdakdj lajsdlkasdjaslj dalkjd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="7dp"
+                android:background="@color/app_cream_white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/task_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comment_container_ll"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/task_status_default"
+            android:textSize="17sp"
+            tools:text="Unresolved" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/status_container_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_rv"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/resolve_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/app_green"
+            android:fontFamily="@font/amsipro_bold"
+            tools:text="Resolve"
+            android:textAllCaps="false"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/cant_resolve_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/app_red"
+            android:fontFamily="@font/amsipro_bold"
+            tools:text="Can't resolve"
+            android:textAllCaps="false"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/check_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_rv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/sign_resolved"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</RelativeLayout>
